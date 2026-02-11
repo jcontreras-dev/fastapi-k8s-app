@@ -25,18 +25,19 @@ spec:
         app: fastapi-app
     spec:
       containers:
-      - name: fastapi-app
-        image: fastapi-app:latest
-        env:
-          - name: REDIS_HOST
-            value: redis
-          - name: POSTGRES_HOST
-            value: postgres
-          - name: POSTGRES_DB
-            value: testdb
-          - name: POSTGRES_USER
-            value: postgres
-          - name: POSTGRES_PASSWORD
-            value: postgres
-        ports:
-          - containerPort: 80
+        - name: fastapi-app
+          image: docker.io/library/fastapi-app:latest
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: REDIS_HOST
+              value: redis
+            - name: POSTGRES_HOST
+              value: postgres
+            - name: POSTGRES_DB
+              value: testdb
+            - name: POSTGRES_USER
+              value: postgres
+            - name: POSTGRES_PASSWORD
+              value: postgres
+          ports:
+            - containerPort: 80
