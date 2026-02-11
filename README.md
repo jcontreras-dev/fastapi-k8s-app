@@ -52,7 +52,7 @@ minikube start
 ```
 ## 2. Construye la imagen dentro de Minikube
 ```
-minikube image build -t fastapi-app:latest
+minikube image build -t fastapi-app:latest .
 ```
 💡 Si usas Docker Desktop y no estás en entorno multinodo, puedes usar:
 ```
