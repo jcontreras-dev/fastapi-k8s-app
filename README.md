@@ -82,6 +82,16 @@ docker --version
 minikube version
 kubectl version --client
 ```
+## Iniciar el cluster
+```
+minikube start --driver=docker
+```
+Luego verificas que esté funcionando:
+```
+kubectl get nodes
+```
+Eso levanta Kubernetes usando Docker.
+
 ## 1.Inicia Minikube
 ```
 minikube start
