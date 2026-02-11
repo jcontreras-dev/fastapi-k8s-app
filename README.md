@@ -46,6 +46,42 @@ Verifica instalación:
 minikube version
 kubectl version --client
 ```
+## PASO 1 — Instalar kubectl
+Ejecuta esto:
+```
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+```
+Luego:
+```
+chmod +x kubectl
+sudo mv kubectl /usr/local/bin/
+```
+Verifica:
+```
+kubectl version --client
+```
+Si muestra versión → ✅ listo.
+
+## 🚀 PASO 2 — Instalar Minikube
+
+Ejecuta:
+```
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+```
+Luego:
+```
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+```
+Verifica:
+```
+minikube version
+```
+Debe mostrar todas la verciones → ✅ listo.
+```
+docker --version
+minikube version
+kubectl version --client
+```
 ## 1.Inicia Minikube
 ```
 minikube start
